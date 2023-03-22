@@ -1,1 +1,30 @@
+#include <iostream>
 
+int main() {
+    const int MONTHS = 12;  
+    double income[MONTHS]; 
+
+    for (int i = 0; i < MONTHS; i++) {
+        std::cout << "Enter income for month " << i + 1 << ": ";
+        std::cin >> income[i];
+    }
+    double max_income = income[0];
+    double min_income = income[0];
+    int max_month = 1;
+    int min_month = 1;
+
+    for (int i = 1; i < MONTHS; i++) {
+        if (income[i] > max_income) {
+            max_income = income[i];
+            max_month = i + 1;
+        }
+        if (income[i] < min_income) {
+            min_income = income[i];
+            min_month = i + 1;
+        }
+    }
+    std::cout << "Maximum income was " << max_income << " in month " << max_month << std::endl;
+    std::cout << "Minimum income was " << min_income << " in month " << min_month << std::endl;
+
+    return 0;
+}
