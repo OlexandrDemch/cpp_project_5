@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+#include <Windows.h>
+
+int main() {
+    SetConsoleOutputCP(1251);
+    const int sides = 5; 
+    float lengths[sides]; 
+    cout << "Введіть довжини сторін п'ятикутника:\n";
+    for (int i = 0; i < sides; i++) {
+        cout << "Сторона " << i + 1 << ": ";
+        cin >> lengths[i];
+    }
+    float perimeter = 0;
+    for (int i = 0; i < sides; i++) {
+        perimeter += lengths[i];
+    }
+    cout << "Периметр п'ятикутника: " << perimeter << endl;
+
+    return 0;
+}
