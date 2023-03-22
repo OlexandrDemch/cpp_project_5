@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+    double total_profit = 0.0;
+    double monthly_profit = 0.0;
+
+    for (int month = 1; month <= 6; month++) {
+        std::cout << "Enter the profit for month " << month << ": ";
+        std::cin >> monthly_profit;
+        total_profit += monthly_profit;
+    }
+
+    std::cout << "The total profit for the 6 months is: " << total_profit << std::endl;
+
+    return 0;
+}
